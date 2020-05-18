@@ -18,5 +18,3 @@ while True:
         print('enter a number')
     except TypeError as e:
         print('enter a number')
-
-# print(f'{g[1]},{g[0]}')
