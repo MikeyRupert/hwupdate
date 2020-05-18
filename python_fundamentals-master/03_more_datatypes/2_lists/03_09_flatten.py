@@ -11,10 +11,7 @@ def flat(starting_list):
     for x in starting_list:
         if isinstance(x, list):
             for x in flat(x):
-                yield x
-                
+                yield x     
         else:
-            yield x
-            
-        
+            yield x        
 print(list(flat(starting_list)))

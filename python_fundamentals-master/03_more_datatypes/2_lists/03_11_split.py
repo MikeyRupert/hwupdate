@@ -13,5 +13,4 @@ def word_count(str):
 	    else:
 	        counts[word] = 1
 	return counts
-
 print(word_count('hey hey you'))

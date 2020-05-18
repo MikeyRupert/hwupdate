@@ -11,13 +11,14 @@ Note: This lab might be challenging! Make sure to discuss it with your mentor
 or chat about it on our forum.
 
 '''
-list_num = [1,3,434,4,3,4,2,3,2,]
-g = sorted(list_num)
-list_tup = []
-for i in g:
-    g.reverse().pop(i)
-    list_tup.append(i)
-    
-
-print(list_tup)
-
+def num(n):
+    n = sorted(n)
+    i = iter(n)
+    for w in zip(i,i):
+        if len(n)%2==0:
+            print(w)
+        else:
+            n.append(0)
+            print(w)
+list_ = [23,32,32,2,34,4,2,2,0,3,43,2]
+(num(list_))

@@ -6,15 +6,10 @@ input = "hello world"
 result_list = [('h', 'e', 'l', 'l', 'o'), ('w', 'o', 'r', 'l', 'd')]
 
 '''
-t = "hello world"
-t=tuple(t)
-for word in t:
-    for char in word:
-        g = tuple(char)
-        result_list = [g]
-    print(result_list,sep='',end=' ')
-    
-# result_list =[t]
-# print(result_list)
-
-            
+def list_of_tups():
+    user_input = input('string hur\n\t==>')
+    split_string = (user_input.split(' '))
+    a,b = split_string  
+    split_string = [tuple(a),tuple(b)]
+    print(split_string)
+list_of_tups()

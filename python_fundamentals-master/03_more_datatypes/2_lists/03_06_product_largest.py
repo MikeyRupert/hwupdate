@@ -11,13 +11,20 @@ come back to this task after you have learned about loops)
 '''
 from operator import mul
 from functools import reduce
-def mult_list():
-    list_ = []
-    for i in range(1,11):
-        user_int_list = int(input('Enter a number, int \n\t-->'))
-        list_.append(user_int_list)
-    g = reduce(mul, list_)
-    print(f'\nThe product of the 10 numbers you just entered is {g}.\n')
+try :
+    def mult_list():
+        list_ = []
+        for i in range(1,11):
+            user_int_list = int(input('Enter a number, int \n\t-->'))
+            list_.append(user_int_list)
+            n= (max(list_))
+        print('\n',f'The largest number you entered was {n}.')
+        g = reduce(mul, list_)
+        print(f'\nThe product of the 10 numbers you just entered is {g}.\n')
+            
+except ValueError as e:
+    print('enter a number')
+
 mult_list()
 
 
