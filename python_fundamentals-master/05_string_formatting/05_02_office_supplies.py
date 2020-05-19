@@ -7,7 +7,6 @@ LASTNAME, Name           Office supply item
 LONGERLASTNAME, Name     Office supply item
 
 '''
-
 scranton = [
     {"full_name": "Michael Scott", "item": "world's best boss mug"},
     {"full_name": "Dwight Schrute", "item": "pepper spray"},
@@ -25,7 +24,6 @@ scranton = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"} 
     ]
-
 flenderson_files = []
 for i in range(len(scranton)):
     name=scranton[0]
@@ -35,6 +33,7 @@ for i in range(len(scranton)):
     toby = f'\t\n{n2[1]}, {n2[0]}\t\t{f2}'
     flenderson_files.append(toby)
     scranton.remove(scranton[0])
-for i in sorted(flenderson_files,key= lambda x: len(x[0])):
+for i in sorted(flenderson_files, key=lambda x: x[0]):
     print(f"\n{i}\n",end='\n')
+
    
