@@ -1,5 +1,6 @@
 '''
 Demonstrate the use of the .enumerate() function.
 '''
-sayin = ['hey','bye','gucci','blatt blatt','sup']
-print(list(enumerate(f'{sayin}', start=42)))
+marathon_finalist = ('forrest gump','usaian bolt','flash','oprah')
+for winners in enumerate(marathon_finalist,start=1):
+    print(f'\t{winners[1].title()} placed {winners[0]} in this marathon.\t',end='')
