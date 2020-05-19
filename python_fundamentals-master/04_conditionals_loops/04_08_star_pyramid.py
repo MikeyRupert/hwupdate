@@ -17,7 +17,7 @@ Another example: if input is 3, you will output
 Hint: Think of nested for loops
 
 '''
-n = int(input('number'))
+n = int(input('\nEnter a big number to make an even bigger pyramid, bigger the better as the mayans say!!!\n\n\t-->'))
 loop = '*'
 for i in range(n):
     print(loop)

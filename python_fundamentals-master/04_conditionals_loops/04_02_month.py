@@ -4,14 +4,17 @@ Take in a number from the user and print "January", "February", ...
 or other respectively. Use a "nested-if" statement.
 
 '''
-months = ['\tJanuary','\tFebruary','\tMarch','\tApril','May','\tJune','July','\tAugust','\tSeptember','\tOctober','\tNovember','\tDecember']
-user_input=int(input('Input Number between 1-12 to find corresponding month.\n-->'))
-
-for num,month in list(enumerate(months, start=1)):
-    if user_input == num:
-        print(month)
-    else:
-        print("Other")
-            
-
-
+def monty():
+    try:
+        months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+        Calender = dict(enumerate(months,start=1))
+        user=int(input('Input Number between 1-12 to find corresponding month.\n-->'))
+        while user<1 or user>=13 or user == str(user):
+            user = int(input('figure it out bud, enter number between 1 and 12'))
+        for k,v in Calender.items():
+            if user== k:
+                return f"{v} is the {user} month of the year."
+    except ValueError as e:
+        return 'Must enter a number between 1 and 12 to find that month'
+        user= int(input('e'))
+print(monty())
