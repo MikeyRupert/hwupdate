@@ -29,12 +29,13 @@ Then iterate over the generator object and print out each item.
 # print(type(next(using_generator)))
 
 '''generator in oneliner'''
-generator_object = (i for i in range(1,10000,6) if i in range(3,1000,5))
+''' (  )'''
+generator_object = [(i for i in range(1,10000,6) if i in range(3,1000,5))
 print('\n')
 print("this is what it looks like on the outside")
 print(generator_object)
 print('\ncalling single generator object')
-print('seeing the generator true colors.')
+print('seeing the generator true colors.call next')
 print(next(generator_object))
 print('\nayyy look at this alot better.. getting somewhere',next(generator_object))
 print(f'...inside a fstring {next(generator_object)}')
