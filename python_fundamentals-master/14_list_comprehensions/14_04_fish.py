@@ -5,6 +5,4 @@ only words ending with *fish.
 Tip: Use an if statement in the listcomp
 
 '''
-
-fish_tuple = ('blowfish', 'clownfish', 'catfish', 'octopus')
-print(' & '.join(word for word in fish_tuple if word[-4:]=='fish'))
+print([(','.join(word for word in ('blowfish', 'clownfish', 'catfish', 'octopus') if word[-4:]=='fish'))])

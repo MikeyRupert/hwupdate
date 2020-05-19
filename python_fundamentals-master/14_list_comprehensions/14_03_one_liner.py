@@ -9,4 +9,4 @@ for letter in 'suchalongword':
 print(letters)
 
 '''
-print('_'.join((char) for char in 'suchalongword'))
+print([(','.join((char) for char in 'suchalongword'))])
