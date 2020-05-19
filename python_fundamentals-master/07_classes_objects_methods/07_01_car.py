@@ -35,10 +35,10 @@ class Car():
         print(str(self.speed))
 
     def __str__(self):
-        return (f'\nCombiniing engineering excellence with a classic interpretation of style, the {self.year} {self.model} can really purr at top speed {self.max_speed}mph.\n')
+        return (f'\nCombiniing engineering excellence with a classic interpretation of style, the {self.year} {self.model} can really purr with a top speed {self.max_speed}mph.\n')
 
 c = Car('Plymouth Hemi GTX convertible',1967,220,250)
 # print(c.accel())
 print(c.__str__())
-print(c.accel())
-print(c.accel())
+# print(c.accel())
+# print(c.accel())

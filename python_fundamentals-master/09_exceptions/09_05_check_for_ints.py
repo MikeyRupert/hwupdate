@@ -25,6 +25,6 @@ while True:
     except ValueError:
         print("I don't know that! Auuuuuuuugh!")
     else:
-        print("Stop! Who would cross the Bridge of Death must answer me these questions three, ere the other side he see.")
+        print("Stop! Who would cross the Bridge of Death must answer me this question, ere the other side he see.")
     finally:
         print('What... is your quest?')
