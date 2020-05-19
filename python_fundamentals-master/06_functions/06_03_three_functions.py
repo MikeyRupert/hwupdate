@@ -20,9 +20,9 @@ class Math_is_Fun():
         return (y2-y1)/(x2-x1)
     
     def __str__(self):
-        return (f'{self.xy1},{self.xy2} has a distance of {self.dis()} and derivative {self.derivative()} ')
+        return (f'{self.xy1},{self.xy2} we cam find:\n\t~ distance:{self.dis()}\n\t~ derivative:{self.derivative()}.')
     
 
 
 g = Math_is_Fun((10,20),(2,9))
-print(Math_is_Fun.__str__(g))
+print('would you look at that...just by entering',Math_is_Fun.__str__(g))
