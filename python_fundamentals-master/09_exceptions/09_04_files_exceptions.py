@@ -23,3 +23,10 @@ BONUS CHALLENGE: write a custom Exception that inherits from Exception and raise
 first 100 characters of any of the files contain the string "Prince".
 
 '''
+class Beer:
+    def __init__(self,name,brand,glasses):
+        self.name = name
+        self.brand = brand
+        self.glasses = glasses
+        
+    

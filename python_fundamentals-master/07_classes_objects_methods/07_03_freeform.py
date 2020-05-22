@@ -16,32 +16,55 @@ Be creative. Have some fun. :)
 Using objects you can model anything you want.
 Cars, animals, poker games, sports teams, trees, beers, people etc...
 
-workout app
+
 '''
-class Workout():
-
-    def __init__ (self,name,date,work=''):
-        self.name = name
-        self.date = date
-        self.work = work
-
+class Tree(object):
+    def __init__(self,env):
+        self.env = env
+        print((f'if you enter {env["x"]} for x and {env["y"]} for y in equation 1:{equation1}={equation1.eval(env)}'),(f'\nif you enter {env["x"]} for x and {env["y"]} for y in equation 2:{equation2}={equation2.eval(env)}'))
+        
+class Multiply(Tree):
+    def __init__(self,l,r):
+        self.l = l 
+        self.r = r
+        
     def __str__(self):
-        return f'on {self.date} {self.name} did the workout {self.work}'
-
-class Boxing(Workout):
-    def __init__(self,name,date,work='',shadowbox ,heavybag ,speedbag):
-        super().__init__(name, date, work)
-        self.rounds = shadowbox
-        self.heavy = heavy
-        self.speedbag = speedbag
+        return "(" + str(self.l) + "*"+ str(self.r) +")"
+    
+    def eval(self,env):
+        return self.l.eval(env) * self.r.eval(env)
+    
+class Addition(Tree):
+    def __init__(self,l,r):
+        self.l = l 
+        self.r = r
         
-        
-        
+    def __str__(self):
+        return "(" + str(self.l) + "+"+ str(self.r) +")"
+    def eval(self,env):
+        return self.l.eval(env) + self.r.eval(env)
 
-class Running(Workout):
-    pass
+class Constant(Tree):
+    def __init__(self,value):
+        self.value = value
+        
+    def __str__(self):
+        return str(self.value)
+        
+    def eval(self,env):
+        return self.value
 
-class lifting(Workout):
-    pass
-m = Workout('mikey','5-15','boxing and running')
-print(m.__str__())
+class Variables(Tree):
+    def __init__(self,name):
+        self.name = name
+        
+    def __str__(self):
+        return self.name
+        
+    def eval(self, env):
+        return env[self.name]
+    
+
+equation1 = Multiply(Constant(4),Addition(Variables("y"),Variables("x")))
+equation2 = Addition(Multiply(Constant(5),Variables("y")), Variables("x"))
+(Tree(env = { "x":3, "y": 10}))  
