@@ -7,5 +7,7 @@ TIP:
     "most popular python package"
 - if you run into encoding/decoding errors, you're experiencing something
     very common. head over to SO and find a solution!
-
 '''
+import urllib.request
+g = urllib.request.urlopen("https://platform.codingnomads.co/learn/my/").read()
+print(g)

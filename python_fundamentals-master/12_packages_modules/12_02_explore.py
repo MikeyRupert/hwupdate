@@ -6,6 +6,8 @@ and play around a little.
 import tensorflow as tf
 import snakemake 
 import nextflow
+import pandas as pd
+import matplotlib
 
 # mnist = tf.keras.datasets.mnist
 
