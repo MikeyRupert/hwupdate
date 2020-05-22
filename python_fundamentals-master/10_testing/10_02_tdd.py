@@ -8,17 +8,7 @@ fail and write tests that will check and prevent failure.
 You do not need to implement the actual functions after writing the tests but you may.
 
 
-def subtract_divide(dividend, x, y):
-    try:
-        z = x - y
-        return dividend / z
-    except ZeroDivisionError:
-        return f"this won't work, {x} - {y} is 0 or lower."
-
-        Check for correct results by providing an example input
-Check that DivisionByZero errors get raised correctly
-        '''
-round
+'''
 import yourpackage
 import unittest
 
